@@ -43,4 +43,10 @@ public class TopicController {
 		return "Updated Successfully.";
 	}
 	
+	// DELETE method using  an id
+	@RequestMapping(method = RequestMethod.DELETE, value="/topics/{id}")
+	public String deleteTopic(@PathVariable String id) {
+		topicService.deleteTopic(id);
+		return "Deleted Successfully.";	
+	}
 }
